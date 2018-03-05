@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { DevExtremeModule } from 'devextreme-angular';
 
-
-import { AppComponent } from './app.component';
+import { AppComponent, customExceptionHandlerProvider } from './app.component';
 
 
 @NgModule({
@@ -10,9 +10,9 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, DevExtremeModule
   ],
-  providers: [],
+  providers: [ customExceptionHandlerProvider ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
